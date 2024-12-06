@@ -477,15 +477,17 @@ aria2 = API(ariaClient(host="http://localhost", port=6800, secret=""))
 
 xnox_client = qbClient(
     host="localhost",
-    port=8090,
-    VERIFY_WEBUI_CERTIFICATE=False,
-    REQUESTS_ARGS={"timeout": (30, 60)},
-    HTTPADAPTER_ARGS={
-        "pool_maxsize": 500,
-        "max_retries": 10,
-        "pool_block": True,
-    },
-)
+                port=8090, 
+                VERIFY_WEBUI_CERTIFICATE=False, 
+                REQUESTS_ARGS={
+                            'timeout': (30, 60)
+                },
+                HTTPADAPTER_ARGS={
+                            "pool_maxsize": 500,
+                            "max_retries": 10,
+                            "pool_block": True,
+                },
+    )
 
 
 def aria2c_init():
